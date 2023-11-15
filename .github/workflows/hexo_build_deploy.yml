@@ -23,9 +23,9 @@ jobs:
             path: ./source
 
         - name: Use Node.js
-          uses: actions/setup-node@v2
+          uses: actions/setup-node@v3
           with:
-            node-version: 14.x
+            node-version: '20'
 
         - name: Install dependencies
           run: npm install
@@ -36,5 +36,5 @@ jobs:
         - name: Deploy
           uses: JamesIves/github-pages-deploy-action@v4.2.2
           with:
-            Branch: html
-            Folder: public
+            branch: html
+            folder: public
